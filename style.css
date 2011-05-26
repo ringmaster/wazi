@@ -1,0 +1,335 @@
+
+/* Scalable Font Sizes */
+
+.smaller {font-size:85%;}  /*renders 11px */
+.small {font-size:100%;} /*renders 13px */
+.normal {font-size:108%;} /*renders 14px */
+.big {font-size:123.1%;} /*renders 16px */
+.bigger {font-size:138.5%;} /*renders 18px */
+
+/* Update and uncomment this block to add a background image to the header */ 
+/*
+#hd h1 a {
+	text-indent: -30000px;
+	background: transparent url("images/masthead.png") scroll no-repeat;
+	height: 38px;
+	width: 100%;
+}
+*/
+
+
+html {
+	background-color: #F5F5F5;
+}
+
+body {
+	margin: 0px;
+	padding:0px;
+	background-color: #F5F5F5;
+	font-family: Times New Roman, serif;
+}
+
+body#body .doc-left {
+	margin: 0px 20px;
+	float: left;
+}
+
+body#body .doc-right {
+	margin: 0px 20px;
+	float: right;
+}
+
+#hd {
+	height: 90px;
+	padding-top: 20px;
+}
+
+#hd h1 a {
+	display: block;
+	outline: none;
+	float: right;
+	color: #AAAAAA;
+	font-size: 275%;
+	font-weight: bold;
+	font-family: Vollkorn;
+}
+
+#columns {
+	clear: both;
+}
+
+a {
+	text-decoration: none;
+	color: #AAAAAA;
+}
+a:hover {
+	color: #888888;
+	text-decoration: underline;
+}
+
+input.error,
+textarea.error {
+	border: 1px solid #FF8888;
+}
+
+ul.error {
+	border: 1px solid #BBBBBB;
+	padding: 5px 10px;
+	margin: 0px 0px 20px;
+	background-color: #E6D8D8;
+	color: #7A6363;
+}
+ul.error li {
+	list-style-type: square;
+	list-style-position: inside;
+}
+
+ul.success {
+	border: 1px solid #BBBBBB;
+	padding: 5px 10px;
+	margin: 0px 0px 20px;
+	background-color: #EEEEEE;
+	color: #666666;
+}
+ul.success li {
+	list-style-type: square;
+	list-style-position: inside;
+}
+
+/* layout */
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.right img {
+	border: 0px;
+	padding: 0px 0px 10px 10px;
+	margin: 0px;
+}
+
+.left img {
+	border: 0px;
+	padding: 0px 10px 10px 0px;
+	margin: 0px;
+}
+
+.moreanchor {
+	display: none;
+}
+.moreanchor:hover {
+	text-decoration: none;
+}
+.moreanchor:target {
+	color: #BBBBBB;
+	display: block;
+	margin-left: -5em;
+	position: absolute;
+}
+
+.entry {
+	margin-bottom: 1.2em;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+/* Typography */
+
+#sidebar h3 {
+	font-size: 138%;
+	margin: 1.0em 0em 0.15em;
+	color: #BBBBBBS;
+	font-family: Vollkorn, serif;
+}
+
+#bd {
+	font-size: 118.5%;
+	line-height: 2em;
+}
+#bd p {
+	margin-top: 1.2em;
+}
+#yui-main ul {
+	margin-bottom: 1.2em;
+	margin-left: 2em;
+}
+#bd li {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+#bd p.more {
+	margin-top: 0em;
+	text-align: right;
+	margin-right: 3em;
+}
+
+#bd h2 {
+	font-size: 200%;
+	margin: 0em 0em 0.5em;
+	color: #BBBBBB;
+	letter-spacing: 0.1em;
+	font-family: Vollkorn;
+}
+
+#bd h3 {
+	font-size: 138%;
+	margin: 1.0em 0em 0.15em;
+	color: #BBBBBB;
+	letter-spacing: 0.1em;
+	font-family: Vollkorn;
+}
+
+#bd h3:first-child {
+	margin-top: 0px;
+}
+
+#ft {
+	border-top: 1px solid #DDDDDD;
+	padding-top: 5px;
+	margin-top: 20px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+/* menus */
+
+.menu {
+	list-style: none;
+	font-family: arial;
+}
+
+.menu li {
+	display: inline;
+	float: left;
+}
+
+.menu li li {
+	display: block;
+	float: none;
+	padding: 2px 0px;
+}
+
+.menu ol {
+	position: absolute;
+	display: none;
+}
+
+.menu li:hover > ol {
+	display: block;
+}
+
+.menu ol div {
+	margin-top: 10px;
+}
+
+.menu div a {
+	background-color: #eaeaea;
+	padding: 6px 16px;
+}
+
+.menu li.active > div > a {
+	background-color: #666666;
+	font-weight: bold;
+}
+
+.menu div a:hover {
+	text-decoration: none;
+	background-color: #e4e4e4;
+}
+
+/* for posts */
+
+.entry-content {
+	margin-top: 1em;
+}
+
+.chronodata {
+	font-size: 100%;
+}
+
+.entry-meta {
+	border-bottom: 1px solid #DDDDDD;
+	border-top: 1px solid #DDDDDD;
+	color: #cccccc;
+}
+.entry-meta a {
+	color: #CCCCCC;
+}
+
+/* comments */
+
+.entry-comments {
+	border-top: 5px solid #BBBBBB;
+}
+
+#yui-main .entry-comments li {
+	list-style-type: none;
+	margin: 1em 0em;
+	border-bottom: 1px solid #BBBBBB;
+	padding: 1em 0em;
+}
+
+.comment-meta {
+	line-height:1em;
+	padding-bottom: 1em;
+}
+
+.comment-avatar {
+	float: left;
+	margin-right: 20px;
+}
+
+.comment-author {
+	font-weight: bold;
+}
+
+.commentform textarea {
+	width: 448px;
+}
+
+.commentform label {
+	display: block;
+	line-height: 1em;
+	font-size: smaller;
+}
+
+.commentform label .required {
+	color: #AAAAAAS;
+	margin-left: 20px;
+}
+
+.comment-personaldetails div {
+	margin-bottom: 1.0em;
+}
+
+/* sidebar */
+#sidebar .block-is_first h3 {
+	margin: 0em 0em 0.15em;
+}
+
+
