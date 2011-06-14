@@ -289,6 +289,12 @@ strong {
 	background-color: #e4e4e4;
 }
 
+.menu ol ol {
+	position: relative;
+	top: -1em;
+	left: 5em;
+}
+
 /* for posts */
 
 .entry-content {
