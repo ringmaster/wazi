@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pluggable type="theme">
-	<name>Sample</name>
+	<name>Wazi</name>
 	<license url="http://www.apache.org/licenses/LICENSE-2.0.html">Apache Software License 2.0</license>
 	<author url="http://asymptomatic.net/">Owen Winkler</author>
 	<url>http://asymptomatic.net</url>
 	<version>1.0</version>
 	<template_engine>rawphpengine</template_engine>
-	<description><![CDATA[This is a sample theme.]]></description>
+	<description><![CDATA[This is a simple, open theme.]]></description>
+	
+	<areas>
+		<area name="nav">
+			<description><![CDATA[The navigation area]]></description>
+		</area>
+		<area name="sidebar">
+			<description><![CDATA[The sidebar area]]></description>
+		</area>
+	</areas>
 </pluggable>

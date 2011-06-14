@@ -1,42 +1,38 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Site Title</title>
+	<title><?php echo Options::get('title'); ?></title>
+	<?php
+		Stack::add('template_stylesheet', array('http://yui.yahooapis.com/2.8.1/build/reset-fonts-grids/reset-fonts-grids.css', 'screen,projection'), 'reset');
+		Stack::add('template_stylesheet', array(Site::get_url('theme', '/style.css'), 'screen,projection'), 'site');
+	?>
 	<?php $theme->header(); ?>
 </head>
 <body id="body">
 <div id="yui-t1" class="yui-t1 doc-center">
-	<div id="hd">
-		<h1><a href="/">Site Title</a></h1>
-		<ol class="menu">
-			<li class="inactive"><a href="/">Home</a>
-				<ol>
-					<li class="inactive"><a href="/page-1">Page 1</a></li>
-					<li class="inactive"><a href="/page-2">Page-2</a></li>
-				</ol>
-			</li>
-		</ol>
-	</div>
+	<header id="hd">
+		<hgroup>
+			<h1><a href="/"><?php echo Options::get('title'); ?></a></h1>
+			<h2><?php echo Options::get('tagline'); ?></h2>
+		</hgroup>
+		<nav>
+		<?php $theme->area('nav'); ?>
+		</nav>
+	</header>
 	<div id="bd">
-		<ul class="success">
-			<li>This is a success message.</li>
-		</ul>
-		<ul class="error">
-			<li>This is an error message.</li>
-		</ul>
+		<?php Session::messages_out(); ?>
+
 		<div id="yui-main">
 			<div id="primary" class="yui-b">
-				<h2>Main Content</h2>
-				<p>Main content goes here.
+				<?php foreach($posts as $post) $theme->content($post); ?>
 		  </div>
 		</div>
-		<div id="sidebar" class="yui-b">
-			<h3>Sidebar</h3>
-			<p>Sidebar content goes here.
-	  </div>
+		<section id="sidebar" class="yui-b">
+			<?php $theme->area('sidebar'); ?>
+	  </section>
 	</div>
 			
-  <div id="ft">My footer stuff</div>
+  <footer id="ft">My footer stuff</footer>
 </div>
 </body>
 </html>

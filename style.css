@@ -44,14 +44,17 @@ body#body .doc-right {
 	padding-top: 20px;
 }
 
+#hd hgroup {
+	float: right;
+	color: #AAAAAA;
+	text-align: right;
+}
+
 #hd h1 a {
 	display: block;
 	outline: none;
-	float: right;
-	color: #AAAAAA;
 	font-size: 275%;
 	font-weight: bold;
-	font-family: Vollkorn;
 }
 
 #columns {
@@ -72,6 +75,7 @@ textarea.error {
 	border: 1px solid #FF8888;
 }
 
+/* These color the session error messages, which are output in a UL */
 ul.error {
 	border: 1px solid #BBBBBB;
 	padding: 5px 10px;
@@ -96,7 +100,7 @@ ul.success li {
 	list-style-position: inside;
 }
 
-/* layout */
+/* Layout helpers */
 
 .right {
 	float: right;
@@ -106,17 +110,7 @@ ul.success li {
 	float: left;
 }
 
-.right img {
-	border: 0px;
-	padding: 0px 0px 10px 10px;
-	margin: 0px;
-}
-
-.left img {
-	border: 0px;
-	padding: 0px 10px 10px 0px;
-	margin: 0px;
-}
+/* Styles for the fancy more anchor, only shows the anchor when the URL fragment targets it */
 
 .moreanchor {
 	display: none;
@@ -131,9 +125,7 @@ ul.success li {
 	position: absolute;
 }
 
-.entry {
-	margin-bottom: 1.2em;
-}
+/* Generic clearfix */
 
 .clearfix:after {
 	content: ".";
@@ -156,6 +148,55 @@ html[xmlns] .clearfix {
 	height: 1%;
 }
 
+/* Post Styles */
+
+article {
+	clear: both;
+	margin-bottom: 2.4em;
+}
+
+article header {
+	line-height: 1.2em;
+	margin-bottom: 0.6em;
+}
+
+article time {
+	font-size: small;
+	color: #aaaaaa;
+}
+
+article h1 {
+	margin-top: 0px;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #BBBBBB;
+}
+
+article h2 {
+	font-size: 1.4em;
+	margin: 0em 0em 0.5em;
+	color: #BBBBBB;
+}
+
+article h3 {
+	font-size: 1.2em;
+	margin: 1.0em 0em 0.15em;
+	color: #BBBBBB;
+}
+
+article img {
+	border:  0px;
+	margin:  0px;
+	padding: 10px;
+}
+
+aside h1 {
+	font-size: 1.2em;
+	color: #BBBBBB;
+}
+
+
+
 /* Typography */
 
 #sidebar h3 {
@@ -170,7 +211,7 @@ html[xmlns] .clearfix {
 	line-height: 2em;
 }
 #bd p {
-	margin-top: 1.2em;
+	margin-bottom: 1.2em;
 }
 #yui-main ul {
 	margin-bottom: 1.2em;
@@ -186,21 +227,7 @@ html[xmlns] .clearfix {
 	margin-right: 3em;
 }
 
-#bd h2 {
-	font-size: 200%;
-	margin: 0em 0em 0.5em;
-	color: #BBBBBB;
-	letter-spacing: 0.1em;
-	font-family: Vollkorn;
-}
 
-#bd h3 {
-	font-size: 138%;
-	margin: 1.0em 0em 0.15em;
-	color: #BBBBBB;
-	letter-spacing: 0.1em;
-	font-family: Vollkorn;
-}
 
 #bd h3:first-child {
 	margin-top: 0px;
@@ -216,7 +243,7 @@ strong {
 	font-weight: bold;
 }
 
-/* menus */
+/* Menus that hover using CSS only */
 
 .menu {
 	list-style: none;
