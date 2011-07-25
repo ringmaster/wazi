@@ -27,9 +27,9 @@
 
 		<div id="yui-main">
 			<div id="primary" class="yui-b">
-				<?php if(isset($posts)): ?>
+				<?php if(isset($posts) && count($posts) > 1): ?>
 					<?php foreach($posts as $post) $theme->content($post); ?>
-					<div id="pagenav">
+					<div class="pagenav">
 						<?php $theme->prev_page_link( _t( '&laquo;&nbsp;Newer&nbsp;Posts' ) ); ?><?php $theme->page_selector( null, array( 'leftSide' => 2, 'rightSide' => 2, 'hideIfSinglePage' => true ) ); ?> <?php $theme->next_page_link( _t( 'Older&nbsp;Posts&nbsp;&raquo;' ) ); ?>
 					</div>
 				<?php else: ?>

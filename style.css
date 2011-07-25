@@ -75,6 +75,10 @@ textarea.error {
 	border: 1px solid #FF8888;
 }
 
+.pagenav {
+	clear: both;
+}
+
 /* These color the session error messages, which are output in a UL */
 ul.error {
 	border: 1px solid #BBBBBB;
