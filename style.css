@@ -23,19 +23,19 @@ html {
 }
 
 body {
-	margin: 0px;
-	padding:0px;
+	margin: 0;
+	padding: 0;
 	background-color: #F5F5F5;
 	font-family: Times New Roman, serif;
 }
 
 body#body .doc-left {
-	margin: 0px 20px;
+	margin: 0 20px;
 	float: left;
 }
 
 body#body .doc-right {
-	margin: 0px 20px;
+	margin: 0 20px;
 	float: right;
 }
 
@@ -83,25 +83,23 @@ textarea.error {
 ul.error {
 	border: 1px solid #BBBBBB;
 	padding: 5px 10px;
-	margin: 0px 0px 20px;
+	margin: 0 0 20px;
 	background-color: #E6D8D8;
 	color: #7A6363;
 }
 ul.error li {
-	list-style-type: square;
-	list-style-position: inside;
+	list-style: square inside;
 }
 
 ul.success {
 	border: 1px solid #BBBBBB;
 	padding: 5px 10px;
-	margin: 0px 0px 20px;
+	margin: 0 0 20px;
 	background-color: #EEEEEE;
 	color: #666666;
 }
 ul.success li {
-	list-style-type: square;
-	list-style-position: inside;
+	list-style: square inside;
 }
 
 /* Layout helpers */
@@ -170,7 +168,7 @@ article time {
 }
 
 article h1 {
-	margin-top: 0px;
+	margin-top: 0;
 	font-size: 1.5em;
 	font-weight: bold;
 	color: #BBBBBB;
@@ -178,19 +176,19 @@ article h1 {
 
 article h2 {
 	font-size: 1.4em;
-	margin: 0em 0em 0.5em;
+	margin: 0 0 0.5em;
 	color: #BBBBBB;
 }
 
 article h3 {
 	font-size: 1.2em;
-	margin: 1.0em 0em 0.15em;
+	margin: 1.0em 0 0.15em;
 	color: #BBBBBB;
 }
 
 article img {
-	border:  0px;
-	margin:  0px;
+	border:  0;
+	margin:  0;
 	padding: 10px;
 }
 
@@ -205,8 +203,8 @@ aside h1 {
 
 #sidebar h3 {
 	font-size: 138%;
-	margin: 1.0em 0em 0.15em;
-	color: #BBBBBBS;
+	margin: 1.0em 0 0.15em;
+	color: #BBBBBB;
 	font-family: Vollkorn, serif;
 }
 
@@ -222,11 +220,10 @@ aside h1 {
 	margin-left: 2em;
 }
 #bd li {
-	list-style-type: disc;
-	list-style-position: inside;
+	list-style: disc inside;
 }
 #bd p.more {
-	margin-top: 0em;
+	margin-top: 0;
 	text-align: right;
 	margin-right: 3em;
 }
@@ -234,7 +231,7 @@ aside h1 {
 
 
 #bd h3:first-child {
-	margin-top: 0px;
+	margin-top: 0;
 }
 
 #ft {
@@ -251,7 +248,7 @@ strong {
 
 .menu {
 	list-style: none;
-	font-family: arial;
+	font-family: arial,serif;
 }
 
 .menu li {
@@ -262,7 +259,7 @@ strong {
 .menu li li {
 	display: block;
 	float: none;
-	padding: 2px 0px;
+	padding: 2px 0;
 }
 
 .menu ol {
@@ -326,9 +323,9 @@ strong {
 
 #yui-main .entry-comments li {
 	list-style-type: none;
-	margin: 1em 0em;
+	margin: 1em 0;
 	border-bottom: 1px solid #BBBBBB;
-	padding: 1em 0em;
+	padding: 1em 0;
 }
 
 .comment-meta {
@@ -356,7 +353,7 @@ strong {
 }
 
 .commentform label .required {
-	color: #AAAAAAS;
+	color: #AAAAAA;
 	margin-left: 20px;
 }
 
@@ -366,7 +363,7 @@ strong {
 
 /* sidebar */
 #sidebar .block-is_first h3 {
-	margin: 0em 0em 0.15em;
+	margin: 0 0 0.15em;
 }
 
 
