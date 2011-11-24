@@ -23,6 +23,7 @@
 		<nav>
 		<?php echo $theme->area('nav'); ?>
 		</nav>
+		<?php echo $theme->area('header'); ?>
 	</header>
 
 	<div id="content">
