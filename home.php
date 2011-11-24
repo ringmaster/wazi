@@ -4,7 +4,7 @@
 	<title><?php if($request->display_entry && isset($post)) { echo $post->title_title . ' - '; } ?><?php echo Options::get('title'); ?></title>
 	<meta charset="UTF-8">
 	<meta name="generator" content="Habari">
-	<link rel="stylesheet/less" href="<?php echo Site::get_url('theme', '/style.less'); ?>">
+	<link rel="stylesheet/less" href="<?php echo Site::get_url('theme', '/less/style.less'); ?>">
 	<?php
 		Stack::add('template_header_javascript', Site::get_url('theme', '/less/less-1.1.5.min.js'), 'less');
 	?>
