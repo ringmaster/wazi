@@ -1,0 +1,29 @@
+@import 'semantic.gs/stylesheets/less/grid.less';
+
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+body {
+	background-color: #eeeefe;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0px auto;
+}
+#content {
+	.row;
+}
+
+#posts {
+	.column(9);
+}
+
+#sidebar {
+	.column(3);
+}
+
+#footer {
+//	clear: both;
+}
