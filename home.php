@@ -20,9 +20,7 @@
 			<h1><a href="/"><?php echo Options::get('title'); ?></a></h1>
 			<h2><?php echo Options::get('tagline'); ?></h2>
 		</hgroup>
-		<nav>
 		<?php echo $theme->area('nav'); ?>
-		</nav>
 		<?php echo $theme->area('header'); ?>
 	</header>
 
