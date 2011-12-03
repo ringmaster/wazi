@@ -4,10 +4,11 @@
 	<title><?php if($request->display_entry && isset($post)) { echo $post->title_title . ' - '; } ?><?php echo Options::get('title'); ?></title>
 	<meta charset="UTF-8">
 	<meta name="generator" content="Habari">
-	<link rel="stylesheet/less" href="<?php echo Site::get_url('theme', '/less/style.less'); ?>">
+	<meta name="viewport" content="width=device-width">
+	<!-- link rel="stylesheet/less" href="<?php echo Site::get_url('theme', '/less/style.less'); ?>"-->
 	<?php
 		Stack::add('template_header_javascript', Site::get_url('theme', '/less/less-1.1.5.min.js'), 'less');
-		//Stack::add('template_stylesheet', Site::get_url('theme', '/less/style.css'), 'less');
+		Stack::add('template_stylesheet', Site::get_url('theme', '/less/style.css'), 'less');
 	?>
 	<link rel="Shortcut Icon" href="<?php Site::out_url( 'theme' ); ?>/favicon.png">
 	<?php echo $theme->header(); ?>
