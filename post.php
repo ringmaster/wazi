@@ -1,7 +1,7 @@
-<article id="post-<?php echo $content->id; ?>" class="post">
+<article id="post-<?php echo $content->id; ?>" class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
 	<header>
-		<h1><a href="<?php echo $content->permalink; ?>"><?php echo $content->title_out; ?></a></h1>
+		<h1><a href="<?php echo $content->permalink; ?>" itemprop="url" itemprop="name"><?php echo $content->title_out; ?></a></h1>
 		<details>
 			<summary>
 				Created on <time datetime="<?php echo $content->pubdate->format('Y-m-d H:i:s'); ?>" pubdate><?php echo $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')); ?></time>
@@ -12,7 +12,7 @@
 		</details>
 	</header>
 
-	<section class="content">
+	<section class="content" itemprop="articleBody">
 		<?php echo $content->content_out; ?>
 	</section>
 
@@ -22,7 +22,7 @@
 		<?php foreach($content->comments->moderated->comments as $comment): ?>
 			<?php echo $theme->content($comment); ?>
 		<?php endforeach; ?>
-		<?php $post->comment_form()->out();	?>
+		<?php $post->comment_form()->out(); ?>
 	</section>
 	<?php endif; ?>
 

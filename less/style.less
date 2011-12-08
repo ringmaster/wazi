@@ -10,13 +10,25 @@
 
 @import 'layout.less';
 
+.clearfix() {
+  zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    zoom: 1;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 
 /* base colors */
 body {
 	background-color: #f8f8f8;
 	font-family: 'Quattrocento', serif;
 }
-
 
 @menu-background: #eaeaea;
 @menu-background-hover: #e4e4e4;
@@ -44,5 +56,21 @@ label {
 	.column(3);
 }
 textarea,input[type=text] {
-	.column(5);
+	.column(4);
+}
+
+.formcontrol {
+	.clearfix();
+//	clear: both;
+}
+
+@linkcolor: #195f91;
+
+a {
+	text-decoration: none;
+	color: @linkcolor;
+	&:hover {
+		color: lighten(@linkcolor, 10%);
+		background: @menu-background-hover;
+	}
 }
