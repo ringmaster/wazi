@@ -1,10 +1,10 @@
 <article id="post-<?php echo $content->id; ?>" class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
 	<header>
-		<h1><a href="<?php echo $content->permalink; ?>" itemprop="url" itemprop="name"><?php echo $content->title_out; ?></a></h1>
+		<h1 itemprop="name"><a href="<?php echo $content->permalink; ?>" itemprop="url"><?php echo $content->title_out; ?></a></h1>
 		<details>
 			<summary>
-				Created on <time datetime="<?php echo $content->pubdate->format('Y-m-d H:i:s'); ?>" pubdate><?php echo $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')); ?></time>
+				Created on <time datetime="<?php echo $content->pubdate->format('Y-m-d H:i:s'); ?>" pubdate itemprop="datePublished"><?php echo $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')); ?></time>
 				by <?php echo $content->author->username; ?>.
 			</summary>
 			<label>Published on: <time datetime="<?php echo $content->pubdate->format('Y-m-d H:i:s'); ?>" pubdate><?php echo $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')); ?></time></label>
@@ -17,7 +17,7 @@
 	</section>
 
 	<?php if($request->display_entry): ?>
-	<section class="comments">
+	<section class="comments" itemprop="comment">
 		<h1 id="comments">Comments</h1>
 		<?php foreach($content->comments->moderated->comments as $comment): ?>
 			<?php echo $theme->content($comment); ?>
