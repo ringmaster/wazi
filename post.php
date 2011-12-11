@@ -4,11 +4,16 @@
 		<h1 itemprop="name"><a href="<?php echo $content->permalink; ?>" itemprop="url"><?php echo $content->title_out; ?></a></h1>
 		<details>
 			<summary>
-				Created on <time datetime="<?php echo $content->pubdate->format('Y-m-d H:i:s'); ?>" pubdate itemprop="datePublished"><?php echo $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')); ?></time>
+				Created on <time datetime="<?php echo $content->pubdate->format('Y-m-d\TH:i:s\Z'); ?>" pubdate itemprop="datePublished"><?php echo $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')); ?></time>
 				by <?php echo $content->author->username; ?>.
 			</summary>
-			<label>Published on: <time datetime="<?php echo $content->pubdate->format('Y-m-d H:i:s'); ?>" pubdate><?php echo $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')); ?></time></label>
-			<label>Created by: <?php echo $content->author->username; ?></label>
+			<label>Published on: <time datetime="<?php echo $content->pubdate->format('Y-m-d\TH:i:s\Z'); ?>" pubdate><?php echo $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')); ?></time></label>
+			<label>Created by: <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?php echo $content->author->username; ?></span></span></label>
+			<ul itemprop="about">
+			<?php foreach($content->tags as $tag): ?>
+				<li itemscope itemtype="http://schema.org"><span itemprop="name"><?php echo $tag->term_display; ?></span></li>
+			<?php endforeach; ?>
+			</ul>
 		</details>
 	</header>
 
