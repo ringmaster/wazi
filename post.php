@@ -2,19 +2,19 @@
 
 	<header>
 		<h1 itemprop="name"><a href="<?php echo $content->permalink; ?>" itemprop="url"><?php echo $content->title_out; ?></a></h1>
-		<details>
-			<summary>
-				Created on <time datetime="<?php echo $content->pubdate->format('Y-m-d\TH:i:s\Z'); ?>" pubdate itemprop="datePublished"><?php echo $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')); ?></time>
-				by <?php echo $content->author->username; ?>.
-			</summary>
-			<label>Published on: <time datetime="<?php echo $content->pubdate->format('Y-m-d\TH:i:s\Z'); ?>" pubdate><?php echo $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')); ?></time></label>
-			<label>Created by: <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?php echo $content->author->username; ?></span></span></label>
-			<ul itemprop="about">
-			<?php foreach($content->tags as $tag): ?>
-				<li itemscope itemtype="http://schema.org"><span itemprop="name"><?php echo $tag->term_display; ?></span></li>
-			<?php endforeach; ?>
-			</ul>
-		</details>
+		<div class="metadata">
+			<p class="pubdata">
+				<?php
+				_e('Created on %1$s by %2$s.', array(
+					'<time datetime="' . $content->pubdate->format('Y-m-d\TH:i:s\Z') . '" pubdate itemprop="datePublished">' . $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')) . '</time>',
+					'<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">' . $content->author->username . '</span></span>',
+				));
+				?>
+			</p>
+			<p itemprop="keywords" class="tags">
+				<?php _e('Categorised under: %1$s', array(Format::tag_and_list($content->tags, ', ', ', and '))); ?>
+			</p>
+		</div>
 	</header>
 
 	<section class="content" itemprop="articleBody">
