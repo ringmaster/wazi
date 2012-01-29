@@ -24,10 +24,18 @@
 	<?php if($request->display_entry): ?>
 	<section class="comments" itemprop="comment">
 		<h1 id="comments">Comments</h1>
-		<?php foreach($content->comments->moderated->comments as $comment): ?>
-			<?php echo $theme->content($comment); ?>
-		<?php endforeach; ?>
+		<?php if($content->comments->moderated->count == 0): ?>
+			<p><?php _e('There are no comments on this post.'); ?>
+		<?php else: ?>
+			<?php foreach($content->comments->moderated->comments as $comment): ?>
+				<?php echo $theme->content($comment); ?>
+			<?php endforeach; ?>
+		<?php endif; ?>
+		<?php if($post->info->comments_disabled): ?>
+			<p><?php _e('Sorry, commenting on this post is disabled.'); ?>
+		<?php else: ?>
 		<?php $post->comment_form()->out(); ?>
+		<?php endif; ?>
 	</section>
 	<?php endif; ?>
 
