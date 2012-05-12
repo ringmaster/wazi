@@ -6,7 +6,7 @@
 			<p class="pubdata">
 				<?php
 				_e('Created on %1$s by %2$s.', array(
-					'<time datetime="' . $content->pubdate->format('Y-m-d\TH:i:s\Z') . '" pubdate itemprop="datePublished">' . $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')) . '</time>',
+					'<time datetime="' . $content->pubdate->format('Y-m-d\TH:i:s\Z') . '" itemprop="datePublished">' . $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')) . '</time>',
 					'<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">' . $content->author->username . '</span></span>',
 				));
 				?>
