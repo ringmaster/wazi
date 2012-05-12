@@ -12,7 +12,7 @@
 	?>
 	<link rel="Shortcut Icon" href="<?php echo $theme->get_url('/favicon.png'); ?>">
 	<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.js"></script>
 	<![endif]-->
 	<?php echo $theme->header(); ?>
 </head>
