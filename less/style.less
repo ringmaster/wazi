@@ -195,11 +195,17 @@ ul.messages {
 		margin: 0 60px;
 	}
 
-	.post .pubdata {
+	.post .pubdata, .post .tags {
 		text-transform: uppercase;
 		font-size: small;
 		color: #7F9FB9;
+	}
 
+	.post .tags::before {
+		content: 'Categorized in: ';
+	}
+
+	.post .pubdata {
 		span[itemprop="author"]::before {
 			content: 'By ';
 		}
