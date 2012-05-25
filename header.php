@@ -5,11 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="generator" content="Habari">
 	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
-	<link rel="stylesheet/less" href="<?php echo $theme->get_url('/less/style.less'); ?>">
-	<?php
-		Stack::add('template_header_javascript', $theme->get_url('/less/less-1.1.5.min.js'), 'less');
-		//Stack::add('template_stylesheet', $theme->get_url('/less/style.css'), 'less');
-	?>
 	<link rel="Shortcut Icon" href="<?php echo $theme->get_url('/favicon.png'); ?>">
 	<!--[if lt IE 9]>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.js"></script>

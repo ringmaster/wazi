@@ -1,3 +1,5 @@
+// ~/lessphp/plessc less/style.less > css/style.css
+
 @import 'normalize.less';
 
 /* grid settings */
@@ -5,7 +7,7 @@
 @column-width: 60;
 @gutter-width: 20;
 
-@import 'semantic.gs/stylesheets/less/grid.less';
+@import 'grid.less';
 @import url(http://fonts.googleapis.com/css?family=Quattrocento);
 
 @import 'layout.less';
@@ -61,6 +63,7 @@ label {
 }
 textarea,input[type=text],input[type=email],input[type=url] {
 	.column(4);
+	box-sizing: border-box;
 }
 
 .formcontrol {
