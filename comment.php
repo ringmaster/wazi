@@ -9,7 +9,7 @@
 				if(!empty($content->url)) {
 					$author = '<a href="%2$s" itemprop="url">%1$s</a>';
 				}
-				printf($author, $content->name, $content->url);
+				printf($author, $content->name_out, $content->url_out);
 				?>
 				</span>
 			</span>
