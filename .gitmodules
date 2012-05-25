@@ -1,6 +1,0 @@
-[submodule "less/semantic.gs"]
-	path = less/semantic.gs
-	url = https://github.com/twigkit/semantic.gs.git
-[submodule "less/bootstrap"]
-	path = less/bootstrap
-	url = https://github.com/twitter/bootstrap.git
