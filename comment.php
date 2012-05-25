@@ -20,5 +20,5 @@
 			</a>
 		</h1>
 	</header>
-	<section class="comment-content" itemprop="commentText"><?php echo $content->content_out; ?></section>
+	<div class="comment-content" itemprop="commentText"><?php echo $content->content_out; ?></div>
 </article>
