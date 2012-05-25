@@ -1,25 +1,19 @@
 <article id="post-<?php echo $content->id; ?>" class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-	<header>
+	<header class="metadata">
 		<h1 itemprop="name"><a href="<?php echo $content->permalink; ?>" itemprop="url"><?php echo $content->title_out; ?></a></h1>
-		<div class="metadata">
-			<p class="pubdata">
-				<?php
-				_e('Created on %1$s by %2$s.', array(
-					'<time datetime="' . $content->pubdate->format('Y-m-d\TH:i:s\Z') . '" itemprop="datePublished">' . $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')) . '</time>',
-					'<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">' . $content->author->username . '</span></span>',
-				));
-				?>
-			</p>
-			<p itemprop="keywords" class="tags">
-				<?php _e('Categorised under: %1$s', array(Format::tag_and_list($content->tags, ', ', ', and '))); ?>
-			</p>
+		<div class="pubdata">
+			<time datetime="<?php echo $content->pubdate->format('Y-m-d\TH:i:s\Z'); ?>" itemprop="datePublished"><?php echo $content->pubdate->format(Options::get('dateformat') . ' ' . Options::get('timeformat')); ?></time>
+			<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?php echo $content->author->username; ?></span></span>
+		</div>
+		<div itemprop="keywords" class="tags">
+			<?php echo Format::tag_and_list($content->tags, ', ', ', and '); ?>
 		</div>
 	</header>
 
-	<section class="content" itemprop="articleBody">
-		<?php echo $content->content_out; ?>
-	</section>
+	<div class="content" itemprop="articleBody">
+	<?php echo $content->content_out; ?>
+	</div>
 
 	<?php if($request->display_entry): ?>
 	<section class="comments" itemprop="comment">

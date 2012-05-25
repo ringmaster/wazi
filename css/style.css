@@ -248,6 +248,32 @@ body {
   font-family:sans-serif;
   text-transform:uppercase;
 }
+#content .comments { clear:both; }
+#content .comments header.comment-meta {
+  margin-bottom:10px;
+  font-weight:bold;
+  border-left-width:1px;
+}
+#content .comments header.comment-meta h1 {
+  font-size:1.0em;
+  zoom:1;
+}
+#content .comments header.comment-meta h1:before, #content .comments header.comment-meta h1:after {
+  display:table;
+  content:"";
+  zoom:1;
+}
+#content .comments header.comment-meta h1:after { clear:both; }
+#content .comments img.comment-avatar {
+  float:left;
+  margin:0px 10px 10px 0px;
+  vertical-align:top;
+}
+#content .comments .comment-author span[itemprop="name"]::before { content:"By "; }
+#content .comments .moderated { opacity:0.6; }
+#content .comments .moderated div[itemprop="description"]::after { content:" is in moderation"; }
+#content .comments .comment-date::before { content:" on "; }
+#comments { font-size:1.5em; }
 .required {
   background-color:red;
   color:white;
@@ -280,7 +306,6 @@ textarea, input[type=text], input[type=email], input[type=url] {
   zoom:1;
 }
 .formcontrol:after { clear:both; }
-summary:before { content:""; }
 a {
   text-decoration:none;
   color:#195f91;

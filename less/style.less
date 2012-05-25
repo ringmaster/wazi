@@ -46,9 +46,45 @@ body {
 	text-transform: uppercase;
 }
 
-/* Comment Form */
-.comments {
+/* Comments and Comment Form */
+#content .comments {
 	clear: both;
+
+	header.comment-meta {
+		margin-bottom: 10px;
+		font-weight: bold;
+		border-left-width: 1px;
+
+		h1 {
+			font-size: 1.0em;
+			.clearfix();
+		}
+	}
+
+	img.comment-avatar {
+		float: left;
+		margin: 0px 10px 10px 0px;
+		vertical-align: top;
+	}
+
+	.comment-author span[itemprop="name"]::before {
+		content: "By ";
+	}
+
+	.moderated {
+		opacity: 0.6;
+		div[itemprop="description"]::after {
+			content: " is in moderation";
+		}
+	}
+
+	.comment-date::before {
+		content: " on ";
+	}
+}
+
+#comments {
+	font-size: 1.5em;
 }
 
 .required {
@@ -70,9 +106,6 @@ textarea,input[type=text],input[type=email],input[type=url] {
 	.clearfix();
 }
 
-summary:before {
-	content: "";
-}
 
 @linkcolor: #195f91;
 
@@ -158,10 +191,8 @@ ul.messages {
 			margin: 0;
 		}
 	}
-	.content {
-		img {
-		  margin: 0 60px;
-		}
+	.content img {
+		margin: 0 60px;
 	}
 }
 

@@ -1,13 +1,24 @@
-<article class="comment" id="comment-<?php echo $content->id; ?>" itemscope itemtype="http://schema.org/UserComments">
-	<details class="comment-meta">
-		<summary itemprop="description">Comment by <?php echo $content->name; ?> on <a href="<?php echo $content->post->permalink; ?>#comment-<?php echo $content->id; ?>" title="<?php _e('Link to this comment'); ?>"><time datetime="<?php echo $content->date->format('Y-m-d H:i:s'); ?>"><?php $content->date->out('M j, Y h:ia'); ?></time></a>.</summary>
-		<div class="comment-avatar"><img src="http://www.gravatar.com/avatar.php?gravatar_id=<?php echo md5($content->email); ?>&size=50&default=<?php Site::out_url('theme', '/images/gravatar.png'); ?>"></div>
-		<div class="comment-author" itemprop="creator"><?php echo $content->name; ?></div>
-		<div class="comment-date"><time datetime="<?php echo $content->date->format('Y-m-d H:i:s'); ?>" itemprop="commentTime"><?php $content->date->out('M j, Y h:ia'); ?></time></div>
-		<div class="comment-url"><a href="<?php echo $content->post->permalink; ?>#comment-<?php echo $content->id; ?>" title="<?php _e('Link to this comment'); ?>" itemprop="commentTime"><?php echo $content->post->permalink; ?>#comment-<?php echo $content->id; ?></a></div>
-		<?php if ( $content->status != Comment::STATUS_APPROVED ) : ?>
-		<div class="comment-moderated"><?php _e('In moderation'); ?></div>
-		<?php endif; ?>
-	</details>
-	<div class="comment-content" itemprop="commentText"><?php echo $content->content_out; ?></div>
+<article class="comment<?php if ( $content->status != Comment::STATUS_APPROVED ) : ?> moderated<?php endif; ?>" id="comment-<?php echo $content->id; ?>" itemscope itemtype="http://schema.org/UserComments">
+	<header class="comment-meta">
+		<h1 itemprop="description">
+			<span class="comment-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+				<img class="comment-avatar" itemprop="image" src="http://www.gravatar.com/avatar/<?php echo md5($content->email); ?>?size=50&d=identicon">
+				<span itemprop="name">
+				<?php
+				$author = '%1$s';
+				if(!empty($content->url)) {
+					$author = '<a href="%2$s" itemprop="url">%1$s</a>';
+				}
+				printf($author, $content->name, $content->url);
+				?>
+				</span>
+			</span>
+			<a href="<?php echo $content->post->permalink; ?>#comment-<?php echo $content->id; ?>" title="<?php _e('Link to this comment'); ?>" itemprop="url">
+				<time class="comment-date" datetime="<?php echo $content->date->format('Y-m-d H:i:s'); ?>" itemprop="commentTime">
+					<?php $content->date->out(Options::get('dateformat') . ' ' . Options::get('timeformat')); ?>
+				</time>
+			</a>
+		</h1>
+	</header>
+	<section class="comment-content" itemprop="commentText"><?php echo $content->content_out; ?></section>
 </article>
