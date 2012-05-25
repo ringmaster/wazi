@@ -11,16 +11,16 @@
 @import 'layout.less';
 
 .clearfix() {
-  zoom: 1;
-  &:before,
-  &:after {
-    display: table;
-    content: "";
-    zoom: 1;
-  }
-  &:after {
-    clear: both;
-  }
+	zoom: 1;
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+		zoom: 1;
+	}
+	&:after {
+		clear: both;
+	}
 }
 
 
@@ -59,7 +59,7 @@ label {
 	margin-right: 1em;
 	.column(3);
 }
-textarea,input[type=text] {
+textarea,input[type=text],input[type=email],input[type=url] {
 	.column(4);
 }
 
@@ -102,6 +102,40 @@ ul.messages {
 	li {
 		margin-left: 20px;
 	}
+}
+
+#header hgroup {
+	text-align: right;
+	border-bottom: 1px solid #ddd;
+	margin: 0 0 5px;
+
+	h1 {
+		padding: 0;
+		margin: 0;
+	}
+	h2 {
+		font-size: 1.0em;
+		padding: 0;
+		margin: 0;
+		color: #999;
+	}
+}
+
+#header nav {
+	ol {
+		margin: 0px;
+		padding: 0px;
+	}
+	li {
+		list-style: none;
+		display: block;
+		float: left;
+		margin: 0 10px 0 0;
+	}
+
+	margin: 0 0 20px;
+	padding: 0 0 5px;
+	border-bottom: 1px solid #ddd;
 }
 
 #content {
