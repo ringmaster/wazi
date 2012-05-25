@@ -194,6 +194,20 @@ ul.messages {
 	.content img {
 		margin: 0 60px;
 	}
+
+	.post .pubdata {
+		text-transform: uppercase;
+		font-size: small;
+		color: #7F9FB9;
+
+		span[itemprop="author"]::before {
+			content: 'By ';
+		}
+
+		time::before {
+			content: ' on ';
+		}
+	}
 }
 
 #content article,
