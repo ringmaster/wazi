@@ -12,6 +12,9 @@
 		<area name="nav">
 			<description><![CDATA[The navigation area]]></description>
 		</area>
+		<area name="top_content">
+			<description><![CDATA[Above the main content area]]></description>
+		</area>
 		<area name="sidebar">
 			<description><![CDATA[The sidebar area]]></description>
 		</area>
