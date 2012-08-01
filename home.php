@@ -3,6 +3,7 @@
 		<?php echo $theme->area('top_content'); ?>
 
 		<div id="posts" itemprop="blogPosts">
+			<?php Utils::debug($posts->get_query()); ?>
 			<?php echo $theme->content($posts); ?>
 		</div>
 

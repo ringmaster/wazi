@@ -4,7 +4,7 @@
 	<title><?php if($request->display_entry && isset($post)) { echo $post->title_title . ' - '; } ?><?php echo Options::get('title'); ?></title>
 	<meta charset="UTF-8">
 	<meta name="generator" content="Habari">
-	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+	<meta name="viewport" content="width=device-width, maximum-scale = 1">
 	<link rel="Shortcut Icon" href="<?php echo $theme->get_url('/favicon.png'); ?>">
 	<?php echo $theme->header(); ?>
 </head>
